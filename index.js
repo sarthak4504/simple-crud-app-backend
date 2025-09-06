@@ -12,11 +12,6 @@ app.use(express.urlencoded({ extended: false }) );
 app.use('/api/products',productRoutes);
 
 
-app.get('/', (req, res) => {
-    res.send("Hello from Node API server Updated");
-});
-
-
 mongoose.connect("mongodb+srv://sarthakpathak4504_db_user:k0nIUuTLGvuoVCXz@backenddb.50y1p3k.mongodb.net/?retryWrites=true&w=majority&appName=BackendDB")
     .then(() => {
         console.log("Connected to MongoDB");
