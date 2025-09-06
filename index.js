@@ -8,6 +8,14 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }) );
 
+//routes
+app.use('/api/products',productRoutes);
+
+
+app.get('/', (req, res) => {
+    res.send("Hello from Node API server Updated");
+});
+
 
 mongoose.connect("mongodb+srv://sarthakpathak4504_db_user:k0nIUuTLGvuoVCXz@backenddb.50y1p3k.mongodb.net/?retryWrites=true&w=majority&appName=BackendDB")
     .then(() => {
